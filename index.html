@@ -371,6 +371,7 @@ const firebaseConfig = {
 };
   
 firebase.initializeApp(firebaseConfig);
+firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL);
 
 document.getElementById('googleLoginBtn').addEventListener('click', () => {
   const provider = new firebase.auth.GoogleAuthProvider();
